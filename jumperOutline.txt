@@ -6,7 +6,7 @@ Object: Player
 Responsibility: store all the game information tied to the player
 Behavior: keep track of guesses and take away parts of parachute based on wrong guesses.
 
-Object: terminal service
+Object: terminal display
 Responsibility: oversee displaying what stage the jumper 
 Behavior: Displays how much loss of parachute the player has as the game goes on. 
 
