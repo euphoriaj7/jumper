@@ -1,7 +1,3 @@
-¬¬Object: Program 
-Responsibility: Oversee executing the entirety of the whole program
-Behavior: calls the director class in its main function
-
 Object: director 
 Responsibility: calls all the others class
 Behavior: It uses the methods stored from the other classes to execute the game
@@ -10,6 +6,11 @@ Object: Player
 Responsibility: store all the game information tied to the player
 Behavior: keep track of guesses and take away parts of parachute based on wrong guesses.
 
-Object: terminal display
+Object: terminal service
 Responsibility: oversee displaying what stage the jumper 
 Behavior: Displays how much loss of parachute the player has as the game goes on. 
+
+Object: Word
+Responsibility: Be responsible for generating and making the word 
+Behavior: Pulls a list from a txt file and stores it into an array. 
+	
