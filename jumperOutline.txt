@@ -1,10 +1,10 @@
 Object: director 
 Responsibility: calls all the others class
-Behavior: It uses the methods stored from the other classes to execute the game
+Behavior: It uses the methods stored from the other classes to execute the game  and take away parts of parachute based on wrong guesses.
 
 Object: Player
 Responsibility: store all the game information tied to the player
-Behavior: keep track of guesses and take away parts of parachute based on wrong guesses.
+Behavior: keep track of guesses.
 
 Object: terminal display
 Responsibility: oversee displaying what stage the jumper 

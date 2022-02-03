@@ -7,14 +7,16 @@ namespace jumper.game
         List<string> words = new List<string>();
         public Word()
         {
-            /*
-            List<List<char>> linesAsChars = File.ReadAllLines(filepath)
-                                    .Select(l => l.ToList())
+            string filename = "words.txt";
+
+            words = File.ReadLines(filename)
                                     .ToList();
-            */
-            
-            // string filename = sy
         }
-        
+        private string getRandomWord()
+        {
+            Random randomWord = new Random();
+            randomWord.Next(words.Count);
+            return words[(randomWord.Next(words.Count))];
+        }
     }
 }
