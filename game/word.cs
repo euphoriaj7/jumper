@@ -4,20 +4,20 @@ namespace jumper.game
 {
     public class Word
     {
-        List<string> words = new List<string>();
-
+        List<string> wordsActual = new List<string>();
+        List<string> wordsGuessed = new List<string>();
         public Word()
         {
             string filename = "words.txt";
 
-            words = File.ReadLines(filename)
+            wordsActual = File.ReadLines(filename)
                                     .ToList();
         }
         private string getRandomWord()
         {
             Random randomWord = new Random();
             // randomWord.Next(words.Count);
-            return words[(randomWord.Next(words.Count))];
+            return wordsActual[(randomWord.Next(wordsActual.Count))];
         }
         private void trackWord()
         {
