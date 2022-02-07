@@ -15,5 +15,10 @@ namespace jumper.game
         {
             wrongGuesses++;
         }
+
+        private void looseParachute()
+        {
+            // Remove sections of the parachute
+        }
     }
 }

@@ -19,5 +19,13 @@ namespace jumper.game
             // randomWord.Next(words.Count);
             return words[(randomWord.Next(words.Count))];
         }
+        private void trackWord()
+        {
+            // Track the number of correct guesses
+        }
+        private void fillSpaceCorrectGuess()
+        {
+            // puts the guess the user made correctly in the space of the chosen word
+        }
     }
 }

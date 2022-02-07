@@ -3,14 +3,14 @@ Responsibility: calls all the others class
 Behavior: It uses the methods stored from the other classes to execute the game  and take away parts of parachute based on wrong guesses.
 
 Object: Player
-Responsibility: store all the game information tied to the player
-Behavior: keep track of guesses.
+Responsibility: store all the game information tied to the player including the parachute
+Behavior: keep track of guesses and remove section of the parachute
 
-Object: terminal display
+Object: terminal service
 Responsibility: oversee displaying what stage the jumper 
 Behavior: Displays how much loss of parachute the player has as the game goes on. 
 
 Object: Word
-Responsibility: Be responsible for generating and making the word 
-Behavior: Pulls a list from a txt file and stores it into an array. 
+Responsibility: Be responsible for generating and making the word. Also track the word is important
+Behavior: Pulls a list from a txt file and stores it into an array. It then selects a word from the list for the user to guess and tracks correct guess by filling them in the word space correctly
 	
