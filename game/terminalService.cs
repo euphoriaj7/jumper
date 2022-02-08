@@ -7,5 +7,10 @@ namespace jumper.game
         public TerminalService()
         {  
         }
+        public string ReadLetter(string l)
+        {
+            Console.Write(l);
+            return Console.ReadLine();
+        }
     }
 }

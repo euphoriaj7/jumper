@@ -10,15 +10,22 @@ namespace jumper.game
         {
             string filename = "words.txt";
 
-            wordsActual = File.ReadLines(filename)
-                                    .ToList();
+            wordsActual = File.ReadLines(filename).ToList();
+            Random random = new Random();
+            
+                        
+
+
         }
         private string getRandomWord()
         {
-            Random randomWord = new Random();
+            Random random = new Random();
             // randomWord.Next(words.Count);
-            return wordsActual[(randomWord.Next(wordsActual.Count))];
+            word = wordsActual[random.Next(0, wordsActual.Count)];
+
+            return word;
         }
+
         private void trackWord()
         {
             // Track the number of correct guesses
