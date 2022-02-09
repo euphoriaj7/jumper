@@ -5,7 +5,7 @@ namespace jumper.game
     public class Guesses
     {
         private int wrongGuesses;
-        public Player()
+        public Guesses()
         {
             wrongGuesses = 0;
         }
