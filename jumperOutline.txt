@@ -12,5 +12,13 @@ Behavior: Displays how much loss of parachute the player has as the game goes on
 
 Object: Word
 Responsibility: Be responsible for generating and making the word. Also track the word is important
-Behavior: Pulls a list from a txt file and stores it into an array. It then selects a word from the list for the user to guess and tracks correct guess by filling them in the word space correctly
+
+States:
+    - words list   
+    - correct for the user to guess 
+    - current word for the user to see where they are at in the game 
+Behavior: 
+    - Pulls a list from a txt file stores it into an array.
+    - Selects a word from the list for the user to guess.
+    - Fills in the correct guesses of the word in the letter spaces
 	

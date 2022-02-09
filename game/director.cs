@@ -6,6 +6,8 @@ namespace jumper.game
         private bool isPlaying;
         private Word word; 
         private TerminalService terminalService;
+        string wordActual;
+
         public Director()
         {
             player = new Player();
@@ -13,6 +15,7 @@ namespace jumper.game
             word = new Word();
             terminalService = new TerminalService();
         }
+        
         public void StartGame()
         {
             while (isPlaying)

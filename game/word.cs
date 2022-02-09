@@ -4,29 +4,44 @@ namespace jumper.game
 {
     public class Word
     {
-        List<string> wordsActual = new List<string>();
-        List<string> wordsGuessed = new List<string>();
+        /*********************************************************
+        * - 
+        **********************************************************/
+        List<string> wordsList;
+        List<string> current;
+        string correct;
         
         public Word()
         {
+            this.wordsList = new List<string>();
+            this.current = new list<string>();
+            this.correct = "";
+
             string filename = "words.txt";
 
-            wordsActual = File.ReadLines(filename).ToList();
-            Random random = new Random();
+            wordsList = File.ReadLines(filename).ToList();
         }
 
-        private string getRandomWord()
+        public void getRandomWord()
         {
             Random random = new Random();
             // randomWord.Next(words.Count);
-            word = wordsActual[random.Next(0, wordsActual.Count)];
+            this.correct = wordsList[random.Next(0, wordsList.Count)];
+            
+            // For every character in correct, add a dash into current
 
-            return word;
+            foreach (char c in this.correct) 
+            {
+                current.Add("_");
+            }
         }
 
         private void trackWord()
         {
-            // Track the number of correct guesses
+            if
+            {
+                correct == wordActual
+            }
         }
 
         private void fillSpaceCorrectGuess()
