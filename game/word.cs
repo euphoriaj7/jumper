@@ -14,7 +14,7 @@ namespace jumper.game
         public Word()
         {
             this.wordsList = new List<string>();
-            this.current = new list<string>();
+            this.current = new List<string>();
             this.correct = "";
 
             string filename = "words.txt";
