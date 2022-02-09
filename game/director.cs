@@ -2,7 +2,7 @@ namespace jumper.game
 {
     public class Director
     {
-        private Player player;
+        private Guesses guesses;
         private bool isPlaying;
         private Word word; 
         private TerminalService terminalService;
@@ -10,7 +10,7 @@ namespace jumper.game
 
         public Director()
         {
-            player = new Player();
+            guesses = new Guesses();
             isPlaying = true;
             word = new Word();
             terminalService = new TerminalService();

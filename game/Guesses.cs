@@ -2,7 +2,7 @@ using System;
 
 namespace jumper.game
 {
-    public class Player
+    public class Guesses
     {
         private int wrongGuesses;
         public Player()

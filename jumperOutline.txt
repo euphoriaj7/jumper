@@ -1,24 +1,33 @@
 Object: director 
 Responsibility: calls all the others class
 Behavior: It uses the methods stored from the other classes to execute the game  and take away parts of parachute based on wrong guesses.
+States/attributes:
 
-Object: Player
-Responsibility: store all the game information tied to the player including the parachute
-Behavior: keep track of guesses and remove section of the parachute
+
+Object: Guesses
+Responsibility: store all the guesses information tied to the player
+Behavior: 
+    -keep track of guesses
+    -tracks the wrong guess made
+States/attributes:
+    -wrong Guesses variable
+
 
 Object: terminal service
-Responsibility: oversee displaying what stage the jumper 
+Responsibility: oversee displaying what stage the jumper is at 
 Behavior: Displays how much loss of parachute the player has as the game goes on. 
+States/attributes:
+
 
 Object: Word
 Responsibility: Be responsible for generating and making the word. Also track the word is important
-
-States:
-    - words list   
-    - correct for the user to guess 
-    - current word for the user to see where they are at in the game 
+ 
 Behavior: 
     - Pulls a list from a txt file stores it into an array.
     - Selects a word from the list for the user to guess.
     - Fills in the correct guesses of the word in the letter spaces
-	
+
+States/attributes::
+    - words list   
+    - correct for the user to guess 
+    - current word for the user to see where they are at in the game	
