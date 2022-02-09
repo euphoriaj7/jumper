@@ -1,5 +1,5 @@
 using System;
-
+// comment
 namespace jumper.game
 {
     public class TerminalService
@@ -18,33 +18,33 @@ namespace jumper.game
             // create the jumper
             if (wrongGuesses == 0)
             {
-                Console.WriteLine(" _____ ")
+                Console.WriteLine(" _____ ");
             }
             if (wrongGuesses <= 1)
             {
-                Console.WriteLine("/_____\ ")
+                Console.WriteLine("/_____\\ ");
             }
             if (wrongGuesses <= 2)
             {
-                Console.WriteLine("\     /")
+                Console.WriteLine("\\     /");
             }
             if (wrongGuesses <= 3)
             {
-                Console.WriteLine(" \   / ")
+                Console.WriteLine(" \\   / ");
             }
             if (wrongGuesses < 4)
             {
-                Console.WriteLine("   O   ")
+                Console.WriteLine("   O   ");
             }
             else
             {
-                Console.WriteLine("   x   ")
+                Console.WriteLine("   x   ");
             }
              
-            Console.WriteLine("  /|\  ")
-            Console.WriteLine("  / \  ")
-            Console.WriteLine("")
-            Console.WriteLine("^^^^^^^")
+            Console.WriteLine("  /|\\  ");
+            Console.WriteLine("  / \\  ");
+            Console.WriteLine("");
+            Console.WriteLine("^^^^^^^");
         }
     }
 }
