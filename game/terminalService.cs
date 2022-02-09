@@ -8,9 +8,9 @@ namespace jumper.game
         {
             // empty constructor  
         }
-        public string ReadLetter(string l)
+        public string ReadLetter(string prompt)
         {
-            Console.Write(l);
+            Console.Write(prompt);
             return Console.ReadLine();
         }
         private void displayJumper(int wrongGuesses)

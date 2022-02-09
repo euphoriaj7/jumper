@@ -15,7 +15,10 @@ States/attributes:
 
 Object: terminal service
 Responsibility: oversee displaying what stage the jumper is at 
-Behavior: Displays how much loss of parachute the player has as the game goes on. 
+Behavior: 
+    -Displays how much loss of parachute the player has as the game goes on. 
+    -gathers input from the user
+    -Read input from user into game
 States/attributes:
 
 
