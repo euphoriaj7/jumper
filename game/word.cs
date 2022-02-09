@@ -10,6 +10,8 @@ namespace jumper.game
         List<string> wordsList;
         List<string> current;
         string correct;
+
+        // bool isLetterGuesses = true
         
         public Word()
         {
@@ -40,7 +42,7 @@ namespace jumper.game
         {
             if
             {
-                correct == wordActual
+                correct == current
             }
         }
 
