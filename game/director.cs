@@ -20,20 +20,10 @@ namespace jumper.game
         {
             while (isPlaying)
             {
-                GetInputs();
+                // GetInputs();
                 // DoUpdates();
                 // DoOutputs();
             }
-        }
-
-        private void GetInputs()
-        {
-            string letter = terminalService.ReadLetter("Enter a letter [a-z]: ");
-            if (word.Contains(letter) == true) 
-            {
-                Console.WriteLine("Word found!");
-            }
-            
         }
     }
 }

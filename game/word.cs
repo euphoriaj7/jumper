@@ -4,13 +4,12 @@ namespace jumper.game
 {
     public class Word
     {
-        /*********************************************************
-        * - 
-        **********************************************************/
+
         List<string> wordsList;
         List<string> current;
+        // List<string> 
         string correct;
-
+        string userGuess;
         // bool isLetterGuesses = true
         
         public Word()
@@ -18,6 +17,8 @@ namespace jumper.game
             this.wordsList = new List<string>();
             this.current = new List<string>();
             this.correct = "";
+            
+            string userGuess = getUserGuess();
 
             string filename = "words.txt";
 
@@ -38,17 +39,19 @@ namespace jumper.game
             }
         }
 
-        private void trackWord()
+        public void trackWord()
         {
-            if
+            correct.Contains(userGuess);
+            if(current = correct)
+            // (word.Contains(letter) == true)
             {
-                correct == current
+                
             }
         }
 
-        private void fillSpaceCorrectGuess()
-        {
-            // puts the guess the user made correctly in the space of the chosen word
-        }
+        // private void fillSpaceCorrectGuess()
+        // {
+        //     // puts the guess the user made correctly in the space of the chosen word
+        // }
     }
 }
