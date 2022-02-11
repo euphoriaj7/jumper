@@ -45,6 +45,12 @@ namespace jumper.game
 
                 isPlaying = false;
             }
+            if(word.isGameWon())
+            {
+                Console.WriteLine("You Win! Thanks for playing!");
+                isPlaying = false;
+            }
+
         }
         private void DoOutputs()
         {

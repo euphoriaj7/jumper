@@ -45,6 +45,17 @@ namespace jumper.game
           
             }
         }
+        public bool isGameWon()
+        {
+            for(int i = 0; i < currentWord.Count; i++)
+            {
+                if(currentWord[i] != correctWord[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         
         // Fills in the correct guesses of the word in the letter spaces
         public bool IsCorrect(char userGuess)
