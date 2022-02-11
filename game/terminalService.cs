@@ -13,7 +13,7 @@ namespace jumper.game
             Console.Write(prompt);
             return Console.ReadLine();
         }
-        private void displayJumper(int wrongGuesses)
+        public void displayJumper(int wrongGuesses)
         {
             // create the jumper
             if (wrongGuesses == 0)

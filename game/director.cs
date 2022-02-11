@@ -7,6 +7,7 @@ namespace jumper.game
         private Word word; 
         private TerminalService terminalService;
         string wordActual;
+        private char userGuess;
 
         public Director()
         {
@@ -14,6 +15,7 @@ namespace jumper.game
             isPlaying = true;
             word = new Word();
             terminalService = new TerminalService();
+            userGuess = ' ';
         }
         
         public void StartGame()
@@ -27,15 +29,33 @@ namespace jumper.game
         }
         private void GetInputs()
         {
-            getUserGuess
+            userGuess = terminalService.getUserGuess();
+
         }
         private void DoUpdates()
         {
+            bool localCorrect = word.IsCorrect(userGuess);
+            if(localCorrect == false)
+            {
+                guesses.countWrongGuesses();
+            }
+            if(guesses.getWrongGuesses() == 4)
+            {
+                Console.WriteLine($"Game over, the correct word is {word.getCorrectWord()}");
 
+                isPlaying = false;
+            }
         }
         private void DoOutputs()
         {
+            foreach (char c in word.getcurrentWord())
+            {
+                Console.Write(c );
+                Console.Write(" ");
+            }
+            Console.WriteLine(" ");
 
+            terminalService.displayJumper(guesses.getWrongGuesses());
         }
     }
 }

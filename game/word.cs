@@ -5,9 +5,9 @@ namespace jumper.game
     public class Word
     {
 
-        List<string> wordsList;
-        List<char> currentWord;
-        string correctWord;
+        private List<string> wordsList;
+        private List<char> currentWord;
+        private string correctWord;
         // string userGuess;
         // bool isLetterGuesses = true
         
@@ -20,20 +20,37 @@ namespace jumper.game
             string filename = "words.txt";
 
             wordsList = File.ReadLines(filename).ToList();
+            getRandomWord();
         }
-
-        public void getRandomWord()
+        public List<char> getcurrentWord()
+        {
+            return currentWord;
+        }
+        public string getCorrectWord()
+        {
+            return correctWord;
+        }
+        private void getRandomWord()
         {
             Random random = new Random();
             // randomWord.Next(words.Count);
             this.correctWord = wordsList[random.Next(0, wordsList.Count)];
+            // Console.WriteLine(correctWord);
             
             // For every character in correct, add a dash into current
 
             foreach (char c in this.correctWord) 
             {
                 currentWord.Add('_');
+          
             }
+            // foreach (char c in currentWord)
+            // {
+            //     Console.Write(c );
+            //     Console.Write(" ");
+            // }
+            // Console.WriteLine(" ");
+
         }
         
         // Fills in the correct guesses of the word in the letter spaces

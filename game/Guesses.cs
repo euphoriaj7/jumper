@@ -9,8 +9,11 @@ namespace jumper.game
         {
             wrongGuesses = 0;
         }
-
-        private void countWrongGuesses()
+        public int getWrongGuesses()
+        {
+            return wrongGuesses;
+        }
+        public void countWrongGuesses()
         {
             wrongGuesses++;
         }
