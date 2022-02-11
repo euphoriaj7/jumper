@@ -44,13 +44,6 @@ namespace jumper.game
                 currentWord.Add('_');
           
             }
-            // foreach (char c in currentWord)
-            // {
-            //     Console.Write(c );
-            //     Console.Write(" ");
-            // }
-            // Console.WriteLine(" ");
-
         }
         
         // Fills in the correct guesses of the word in the letter spaces
@@ -68,10 +61,5 @@ namespace jumper.game
             }
             return correct;
         }
-
-        // private void fillSpaceCorrectGuess()
-        // {
-        //     // puts the guess the user made correctly in the space of the chosen word
-        // }
     }
 }
