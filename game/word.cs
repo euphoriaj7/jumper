@@ -14,7 +14,7 @@ namespace jumper.game
         public Word()
         {
             this.wordsList = new List<string>();
-            this.currentWord = new List<string>();
+            this.currentWord = new List<char>();
             this.correctWord = "";
 
             string filename = "words.txt";
@@ -32,7 +32,7 @@ namespace jumper.game
 
             foreach (char c in this.correctWord) 
             {
-                currentWord.Add("_");
+                currentWord.Add('_');
             }
         }
         

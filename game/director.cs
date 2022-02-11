@@ -20,10 +20,22 @@ namespace jumper.game
         {
             while (isPlaying)
             {
-                // GetInputs();
-                // DoUpdates();
-                // DoOutputs();
+                GetInputs();
+                DoUpdates();
+                DoOutputs();
             }
+        }
+        private void GetInputs()
+        {
+            getUserGuess
+        }
+        private void DoUpdates()
+        {
+
+        }
+        private void DoOutputs()
+        {
+
         }
     }
 }
