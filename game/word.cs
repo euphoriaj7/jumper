@@ -6,19 +6,16 @@ namespace jumper.game
     {
 
         List<string> wordsList;
-        List<string> current;
-        // List<string> 
-        string correct;
-        string userGuess;
+        List<char> currentWord;
+        string correctWord;
+        // string userGuess;
         // bool isLetterGuesses = true
         
         public Word()
         {
             this.wordsList = new List<string>();
-            this.current = new List<string>();
-            this.correct = "";
-            
-            string userGuess = getUserGuess();
+            this.currentWord = new List<string>();
+            this.correctWord = "";
 
             string filename = "words.txt";
 
@@ -29,24 +26,30 @@ namespace jumper.game
         {
             Random random = new Random();
             // randomWord.Next(words.Count);
-            this.correct = wordsList[random.Next(0, wordsList.Count)];
+            this.correctWord = wordsList[random.Next(0, wordsList.Count)];
             
             // For every character in correct, add a dash into current
 
-            foreach (char c in this.correct) 
+            foreach (char c in this.correctWord) 
             {
-                current.Add("_");
+                currentWord.Add("_");
             }
         }
-
-        public void trackWord()
+        
+        // Fills in the correct guesses of the word in the letter spaces
+        public bool IsCorrect(char userGuess)
         {
-            correct.Contains(userGuess);
-            if(current = correct)
-            // (word.Contains(letter) == true)
+            // correct.Contains(userGuess);
+            bool correct = false;
+            for(int i = 0; i < correctWord.Length; i++)
             {
-                
+                if(userGuess == correctWord[i] && currentWord[i]=='_')
+                {
+                    currentWord[i] = userGuess;
+                    correct = true;
+                }
             }
+            return correct;
         }
 
         // private void fillSpaceCorrectGuess()

@@ -6,7 +6,7 @@ namespace jumper.game
     {
         public TerminalService()
         {
-            string userGuess;
+            // Empty Constructor
         }
         public string ReadLetter(string prompt)
         {
@@ -45,10 +45,11 @@ namespace jumper.game
             Console.WriteLine("");
             Console.WriteLine("^^^^^^^");
         }
-        public string getUserGuess()
+        public char getUserGuess()
         {
+            char userGuess;
             Console.WriteLine("Guess a letter [a-z]: ");
-            string userGuess = Console.ReadLine();
+            userGuess = Console.ReadLine()[0];
             return userGuess;
         }
     }
